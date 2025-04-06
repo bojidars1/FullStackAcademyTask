@@ -1,15 +1,15 @@
 package com.example;
 
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.example.task1.StringReverser;
 import com.example.task2.WordFrequencyCounter;
 import com.example.task3.ArrayListLoopTest;
 import com.example.task4.FindDuplicateChars;
 import com.example.task5.ExcelProcessor;
 import com.example.task5.utils.FilterParser;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -68,7 +68,6 @@ public class Main {
                         String userFilter = scanner.nextLine();
 
                         Predicate<Row> filter = FilterParser.from(userFilter, headerMap);
-
                         String inputPath = "data/input.xlsx";
                         String outputPath = "data/output.xlsx";
                         int avgColumnKey = 2; // Hello Methodia, change according to your input file (MUST BE NUMERIC COLUMN)
